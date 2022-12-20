@@ -50,7 +50,7 @@ async function handleEvent(event) {
       } else {
         resolve(lineClient.replyMessage(event.replyToken, {
           type: 'text',
-          text: body.choices[0].text
+          text: body.choices[0].text.trim()
         }));
       }
     });
