@@ -48,6 +48,7 @@ async function handleEvent(event) {
       if (error) {
         reject(error);
       } else {
+        console.log(body)
         resolve(lineClient.replyMessage(event.replyToken, {
           type: 'text',
           text: body.choices[0].text.trim()
